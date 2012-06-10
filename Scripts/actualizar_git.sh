@@ -6,6 +6,9 @@
 
 # @author: Fernando Moro
 # @date: 10 - June - 2012
+# @TODO: Verificar si en el directorio actual existe un directorio .git [si hay un repositorio].
+#        Soporte para la creación de nuevo repositorio, permitiendo conexión a un servidor nuevo.
+#        Incluir la ayuda de DIALOG, que se mostrará con el flag -h
 
 # Nos colocamos en el home
 cd $HOME
