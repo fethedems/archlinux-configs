@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#cargamos los módulos
+# load module vboxdrv
 gksudo modprobe vboxdrv
-#le damos caña
+# open windows VM called "Windows Lite"
 VBoxManage startvm "Windows Lite"
