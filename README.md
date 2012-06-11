@@ -9,8 +9,9 @@ Incluye:
 --------
 
   * Bash - Archivos de configuración.
-  * Scripts - Directorio con scripts creados por mi.
+  * [Scripts](https://github.com/fethedems/archlinux-configs/tree/master/Scripts) - Directorio con scripts creados por mi.
 
 Se pueden añadir fácilmente al `PATH` de linux creando un enlace:
   
     ln <script> /usr/bin/<nombre>
+
