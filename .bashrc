@@ -1,6 +1,5 @@
-#Cargamos las configs personales
+# Load aliases and personal functions
 
-#Cargamos los alias
 if [ -f ~/.bash_aliases ];
 then
   . ~/.bash_aliases
