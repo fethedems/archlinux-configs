@@ -204,9 +204,13 @@ clear
 }
 
 # COMBO CD-LS
-function cdl {
-cd "$1"
-ls --color=auto
+cd ()
+{
+	if [ -n "$1" ]; then
+		builtin cd "$@" && ls
+	else
+		builtin cd ~ && ls
+	fi
 }
 
 # MI PROMPT
