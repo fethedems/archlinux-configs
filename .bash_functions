@@ -121,8 +121,8 @@ function miserver
 {
 #variables:
 username=$(whoami)
-iplocal="192.168.2.101"
-ippublic="89.128.240.93"
+iplocal="xxx.xxx.x.xxx"
+ippublic="xx.xxx.xxx.xx"
 puerto="8083"
 
 #donde me conecto:
