@@ -80,7 +80,7 @@ clear
 
 OPTERR=0
 
-while getopts "iah" option
+while getopts "ih" option
 do
 	case "$option" in
 	i) #init
@@ -91,28 +91,23 @@ do
 		read COMMIT
 		# Updating...
 		git commit -m "$COMMIT"
-		;;
-	a)	#actualize
-
-		if [ -d "$HOME/.git" ]
-		then
-			addCommit
-		else
-			echo "You should initialice your repository."
-			exit 0
-		fi
+		exit 0
 		;;
 
 	h) # Displays help
 
 		githelp
+		exit 0
 		;;
 	
-	*) echo "Use: actualizar_git [-h] [-i] [-a]"
-		echo "-a: actualize"
+	*) echo "Use: actualizar_git [-h] [-i]" 
 		echo "-i: init"
 		echo "-h: display help"
+		exit 0
 		;;
 
 	esac
 done
+
+# If there aren't flags, actualize
+addCommit
