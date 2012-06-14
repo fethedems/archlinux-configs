@@ -5,9 +5,7 @@
 
 # @author: Fernando Moro
 # @date: 10 - June - 2012
-# @TODO: Verificar si en el directorio actual existe un directorio .git [si hay un repositorio].
-#        Soporte para la creación de nuevo repositorio, permitiendo conexión a un servidor nuevo.
-#        Incluir la ayuda de DIALOG, que se mostrará con el flag -h
+# @TODO: 
 
 function addCommit ()
 {
@@ -84,7 +82,7 @@ while getopts "ih" option
 do
 	case "$option" in
 	i) #init
-		# git init
+		git init
 		git add.	
 		# Reading commit
 		echo "Please, insert a new commit:"
@@ -100,7 +98,8 @@ do
 		exit 0
 		;;
 	
-	*) echo "Use: actualizar_git [-h] [-i]" 
+	*) echo "actualizar_git [-h] [-i]" 
+		echo "FLAGS:"
 		echo "-i: init"
 		echo "-h: display help"
 		exit 0
