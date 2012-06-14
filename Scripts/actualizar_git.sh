@@ -78,6 +78,45 @@ clear
 
 }
 
+while getopts "iah" option
+do
+	case "$option" in
+	i)	#init
+
+		git init
+		git add.	
+		# Reading commit
+		echo "Please, insert a new commit:"
+		read COMMIT
+		# Updating...
+		git commit -m "$COMMIT"
+		;;
+
+	a)	#actualize
+
+		if [ -d "$HOME/.git" ]
+		then
+			addCommit
+		else
+			echo "You should initialice your repository."
+			exit 0
+		fi
+		;;
+
+	h) # Displays help
+
+		githelp
+		;;
+	
+	*) echo "Use: actualizar_git [-h] [-i] [-a]"
+		echo "-a: actualize"
+		echo "-i: init"
+		echo "-h: display help"
+		;;
+
+	esac
+done
+
 
 
 if [ -d "$HOME/.git" ]
