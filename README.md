@@ -13,6 +13,6 @@ Incluye:
 
 Se pueden añadir fácilmente al `PATH` de linux creando un enlace:
   
-    ln <script> /usr/bin/<nombre>
+    ln -s <script> /usr/local/bin/<script_name>
 
 ###¡Hazle `fork` al repo si te interesa perfeccionar algún script!
