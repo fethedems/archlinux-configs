@@ -43,33 +43,33 @@ function addCommit ()
 function githelp
 {
 dialog --colors --backtitle "DEMS ® 2011" --title "GIT-COMMANDOS - BY DEMS" \
---msgbox "\Zb\Z1INICIO \Zn
+--msgbox "\Zb\Z1INIT A REPOSITORY \Zn
 $ git init
 $ git add .
-$ git commit -m <nombre>
-\Zb\Z1RESPALDOS POSTERIORES \Zn
-$ git commit -a -m <nombre2>
-\Zb\Z1COMPROBAR CAMBIOS \Zn
+$ git commit -m <text>
+\Zb\Z1BACKUP A COMMIT\Zn
+$ git commit -a -m <text>
+\Zb\Z1VIEW CHANGES \Zn
 $ git status
-\Zb\Z1VER RESPALDOS \Zn
+\Zb\Z1VIEW COMMITS\Zn
 $ git log
-\Zb\Z1CARGAR RESPALDOS \Zn
+\Zb\Z1LOAD COMMIT \Zn
 $ git checkout master
 $ git checkout SHA1_HASH
-$ git checkout :/'nombre'
-$ git checkout master~5 (5o estado hacia atras)
-$ git checkout SHA1_HASH <archivo> <archivo2>
-\Zb\Z1ETIQUETAS \Zn
-$ git tag <nombre> [<HASH commit>]
-\Zb\Z1CREAR RAMA \Zn
-$ git checkout -b <rama>
-\Zb\Z1BORRAR RAMA \Zn
-$ git branch -d <rama>
-\Zb\Z1LISTAR RAMAS \Zn
+$ git checkout :/'name'
+$ git checkout master~5 (5th commit before)
+$ git checkout SHA1_HASH <file> <file2> <...>
+\Zb\Z1TAGS \Zn
+$ git tag <name> [<HASH commit>]
+\Zb\Z1CREATE NEW BRANCH\Zn
+$ git checkout -b <branch>
+\Zb\Z1DELETE BRANCH \Zn
+$ git branch -d <branch>
+\Zb\Z1LIST BRANCHES \Zn
 $ git branch
-\Zb\Z1POSICIONARSE EN RAMA \Zn
-$ git checkout <rama>
-$ git checkout master (rama principal)
+\Zb\Z1CHANGE FOREGROUND BRANCH \Zn
+$ git checkout <branch>
+$ git checkout master (main branch)
 
 " 0 0
 clear
