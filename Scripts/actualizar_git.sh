@@ -78,12 +78,13 @@ clear
 
 }
 
+OPTERR=0
+
 while getopts "iah" option
 do
 	case "$option" in
-	i)	#init
-
-		git init
+	i) #init
+		# git init
 		git add.	
 		# Reading commit
 		echo "Please, insert a new commit:"
@@ -91,7 +92,6 @@ do
 		# Updating...
 		git commit -m "$COMMIT"
 		;;
-
 	a)	#actualize
 
 		if [ -d "$HOME/.git" ]
@@ -116,13 +116,3 @@ do
 
 	esac
 done
-
-
-
-if [ -d "$HOME/.git" ]
-then
-	addCommit
-else
-	echo "You should initialice your repository."
-	exit 0
-fi
