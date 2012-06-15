@@ -24,3 +24,7 @@ alias actualizar='yaourt -Syu --aur --devel --noconfirm'
 alias listar='yaourt -Q'
 alias tengo='yaourt -Qi'
 alias info='yaourt -Si'
+
+# Reboot, halt...
+alias halt='sudo halt'
+alias reboot='sudo reboot'

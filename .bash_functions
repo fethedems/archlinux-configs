@@ -213,8 +213,5 @@ cd ()
 	fi
 }
 
-# MI PROMPT
-export PS1='┌─☢ \033[1;31m\u\033[0m ☭ \033[1;35m\h\033[0m ☢──[\033[1;35m\w\033[0m]\$ \033[0m\n└─(\t)──> '
-
 # EXPORTAMOS EL PATH DE RAILS
 export PATH=$PATH:/home/ferthedems/.gem/ruby/1.9.1/bin
