@@ -11,6 +11,7 @@ Incluye:
   * Bash - Archivos de configuración.
   * [Scripts](https://github.com/fethedems/archlinux-configs/tree/master/Scripts) - Directorio con scripts creados por mi.
   * [.lua](https://github.com/fethedems/archlinux-configs/tree/master/.lua) - Directorio con la configuración de conky-lua.
+
 Se pueden añadir fácilmente al `PATH` de linux creando un enlace:
   
     ln -s <script> /usr/local/bin/<script_name>
