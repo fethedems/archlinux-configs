@@ -17,7 +17,7 @@ set_prompt ()
 {
 while [[ i -lt $(tput cols) ]]
 do
-	cadena=$cadena-
+	cadena=$cadena►
 	let i=i+1
 done
 	echo "$cadena"
