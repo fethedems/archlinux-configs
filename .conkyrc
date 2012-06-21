@@ -1,0 +1,79 @@
+# Conky settings #
+own_window_class Conky
+own_window yes
+#own_window_type conky
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+background no
+update_interval 1
+
+cpu_avg_samples 2
+net_avg_samples 2
+
+override_utf8_locale yes
+
+double_buffer yes
+no_buffers yes
+
+text_buffer_size 2048
+#imlib_cache_size 0
+
+temperature_unit fahrenheit
+
+# Window specifications #
+
+border_inner_margin 0
+border_outer_margin 0
+
+#primero ancho, luego alto
+minimum_size 250 270
+#maximum_width 200
+
+alignment tr
+gap_x 0
+gap_y 768
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftfont Ubuntu:bold:size=8
+#xftalpha 0.5
+
+# Color Title.
+color0 DD3A21
+
+uppercase no
+
+temperature_unit celsius
+
+
+default_color FFFFFF
+
+# Lua Load  #
+lua_load ~/.lua/scripts/clock_rings.lua
+lua_draw_hook_pre clock_rings
+
+TEXT
+
+
+
+
+
+#MOSTRAMOS TIEMPO DE ACTIVIDAD
+
+${alignr}${color FFFFFF}${font Ubuntu:size=11}
+
+
+${goto 210}${color 00FFFF}${font Ubuntu:size=8}${goto 210}DATA
+${goto 210}${color 00FFFF}HOME
+${goto 210}${color FF6600}SWAP
+${goto 210}${color EE9A00}RAM
+${goto 210}${color EEC900}CPU
+${font Ubuntu:size=5}
+${font Ubuntu:size=10}${goto 177}${uptime_short}
