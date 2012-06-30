@@ -1,8 +1,13 @@
 #!/usr/bin/python
-
 import os
 import subprocess
 import re
+
+if os.path.isfile("/usr/bin/dialog"):
+	print("Se cumple con las dependencias requeridas")
+else:
+	print("No se cumple con las dependencias requeridas. ERROR.")
+
 # Array with the initial programs. The main structure is:
 # [ [ name ] [command] ]
 
@@ -11,6 +16,7 @@ apps = [
 ['XOrg Basics','sudo pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils'],
 ['Gnome Shell','pacman -Syu gnome gnome-extra'],
 ['KDE','sudo pacman -S kde # kde-l10n-es IDIOMA ESPAÑOL'],
+['Lenguaje español - KDE','sudo pacman kde-l10n-es'],
 ['XFCE','sudo pacman -S xfce4'],
 ['OpenBox','sudo pacman -S openbox'],
 # VIDEO DRIVERS
@@ -21,7 +27,7 @@ apps = [
 # PLUGIN - CODECS
 ['Flash Plugin','sudo pacman -S flashplugin'],
 ['Codecs GSTREAMER','sudo pacman -S gstreamer0.10-{{bad,good,ugly,base}{,-plugins},ffmpeg}'],
-# DEVELOPERS
+# DEVELOPERS TOOLS
 ['gVIM','sudo pacman -S gvim'],
 ['Eclipse','pacman -S eclipse'],
 ['Netbeans','pacman -S netbeans'],
@@ -34,15 +40,17 @@ apps = [
 ['Chromium','pacman -S chromium'],
 ['Opera','pacman -S opera'],
 ['Dropbox','yaourt -S dropbox --noconfirm'],
-# Downloads
+# DOWNLOADS
 ['jDownloader','yaourt -S jdownloader --noconfirm'],
 ['qBitTorrent','yaourt -S qbittorrent --noconfirm'],
 # OTHER
 ['Yaourt','sudo pacman -S yaourt #needed archlinuxfr repo'],
 ['Wine','sudo pacman -S wine'],
+['Comix','sudo pacman -S mcomix'],
 ['Create Basic Directories','sudo pacman -S xdg-user-dirs && xdg-user-dirs-update'],
 # FONTS
-['Install basic fonts', 'sudo pacman -S ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont']
+['Install basic fonts', 'sudo pacman -S ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont'],
+['Install Microsoft fonts from AUR', 'yaourt -S ttf-ms-fonts']
 ]
 
 # Initial command
@@ -72,4 +80,4 @@ for element in output:
 	for app in apps:
 		if app[0] == element:
 			print(app[0],"->",app[1])
-
+			os.system(app[1])
